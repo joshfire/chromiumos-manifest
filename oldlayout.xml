@@ -3,6 +3,9 @@
   <remote  name="cros"
            fetch="http://git.chromium.org"
            review="gerrit.chromium.org/gerrit" />
+  <remote  name="github"
+           fetch="git@github.com:"
+           review="gerrit.chromium.org/gerrit" />
   <default revision="refs/heads/0.13.587.B"
            remote="cros" />
 
@@ -55,11 +58,12 @@ Your sources have been sync'd successfully.
            name="chromiumos/platform/google-breakpad" />
   <project path="src/platform/image-burner"
            name="chromiumos/platform/image-burner" />
-  <project path="src/platform/init" name="chromiumos/platform/init" />
+  <project path="src/platform/init"
+           remote="github" name="joshfire/chromiumos-platform-init" />
   <project path="src/platform/initramfs" name="chromiumos/platform/initramfs" />
   <project path="src/platform/installer" name="chromiumos/platform/installer" />
   <project path="src/platform/login_manager"
-           name="chromiumos/platform/login_manager" />
+           remote="github" name="joshfire/chromiumos-platform-login_manager" />
   <project path="src/platform/memento_softwareupdate"
            name="chromiumos/platform/memento_softwareupdate" />
   <project path="src/platform/metrics" name="chromiumos/platform/metrics" />
@@ -92,7 +96,7 @@ Your sources have been sync'd successfully.
   <project path="src/platform/vpn-manager"
            name="chromiumos/platform/vpn-manager" />
   <project path="src/platform/window_manager"
-           name="chromiumos/platform/window_manager" />
+           remote="github" name="joshfire/chromiumos-platform-window_manager" />
   <project path="src/platform/workarounds"
            name="chromiumos/platform/workarounds" />
   <project path="src/third_party/atheros"
@@ -129,7 +133,7 @@ Your sources have been sync'd successfully.
            name="chromiumos/third_party/seabios" />
 
   <project path="src/overlays"
-           name="chromiumos/overlays/board-overlays" />
+           remote="github" name="joshfire/chromiumos-overlays" />
   <project path="src/common" name="chromiumos/platform/libchromeos" />
   <project path="src/scripts" name="chromiumos/platform/crosutils" />
 
@@ -149,8 +153,7 @@ Your sources have been sync'd successfully.
   <project path="src/third_party/trousers"
            name="chromiumos/third_party/trousers" />
   <project path="src/third_party/kernel/files"
-           name="chromiumos/third_party/kernel"
-           revision="refs/heads/0.13.587.B" />
+           remote="github" name="joshfire/chromiumos-third_party-kernel" />
   <project path="src/third_party/kernel-next"
            name="chromiumos/third_party/kernel-next"
            revision="refs/heads/0.13.587.B" />
